@@ -11,12 +11,12 @@ def test_valid_login():
 
     # Find input with name username
     username_element = driver.find_element(by='xpath', value='//input[@name="username"]')
-    username_element.send_keys('vitaliipavliuk')
+    username_element.send_keys('Yermolenko')
     print("I've entered the username")
 
     # Find input with name password
     password_element = driver.find_element(by='xpath', value='//input[@name="password"]')
-    password_element.send_keys('gddgdd')
+    password_element.send_keys('admin')
     print("I've entered the password")
 
     # Find the Login button
@@ -26,7 +26,7 @@ def test_valid_login():
     # Check that we are on chango admin
     welcome_text = driver.find_element(by='id', value='user-tools').text
 
-    assert "welcome, vitaliipavliuk" in welcome_text.lower()
+    assert "welcome, Yermolenko" in welcome_text.lower()
     print("I'm on the admin panel")
 
     print("I'm done")
@@ -41,7 +41,7 @@ def test_invalid_login():
 
     # Find input with name username
     username_element = driver.find_element(by='xpath', value='//input[@name="username"]')
-    username_element.send_keys('vitaliipavliuk')
+    username_element.send_keys('Yermolenko')
     print("I've entered the username")
 
     # Find input with name password
